@@ -7,6 +7,7 @@ import { FooterComponent } from '../components/footer/footer.component';
 import { FormComponent } from '../components/form/form.component';
 import { TruckdetailsComponent } from './truckdetails/truckdetails.component';
 import { ApplicationComponent } from './application/application.component';
+import { InfocardsComponent } from './infocards/infocards.component';
 
 @Component({
   selector: 'app-homepage',
@@ -20,6 +21,7 @@ import { ApplicationComponent } from './application/application.component';
     FormComponent,
     TruckdetailsComponent,
     ApplicationComponent,
+    InfocardsComponent,
   ],
 })
 export class HomepageComponent {}
