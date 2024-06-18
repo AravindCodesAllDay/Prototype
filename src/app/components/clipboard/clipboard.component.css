@@ -1,0 +1,12 @@
+.tooltip {
+  transition: opacity 0.3s;
+}
+
+.tooltip.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .hidden {
+  display: none;
+}
