@@ -10,7 +10,7 @@ module.exports = {
         majorwhite: "#ffffff",
       },
       backgroundImage: {
-        header: "url('./assets/header.webp')",
+        header: "url('./assets/header.jpg')",
         logo: "url('./assets/logo.png')",
         story: "url('./assets/story.jpg')",
         roadcross: "url('./assets/roadcross.jpg')",

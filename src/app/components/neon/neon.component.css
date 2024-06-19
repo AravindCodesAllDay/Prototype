@@ -16,22 +16,6 @@ h6 {
   -webkit-animation: blink 5s infinite;
 }
 
-body {
-  padding: 2vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #222;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 7px,
-    rgba(0, 0, 0, 0.8) 9px,
-    rgba(0, 0, 0, 0.8) 13px,
-    transparent 13px
-  );
-}
-
 @-webkit-keyframes blink {
   20%,
   24%,
