@@ -1,4 +1,36 @@
-<app-navbar />
-<img src="../../assets/contact.jpg" class="w-screen" alt="" />
-<app-form />
-<app-footer />
+<div class="bg-secondary">
+  <app-navbar />
+  <img src="../../assets/contact.jpg" class="w-screen" alt="contact" />
+  <div
+    class="m-3 p-8 bg-[#abe4f1] font-medium text-lg flex justify-center items-center text-black gap-3 rounded-md bg-opacity-45"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-clock-2 size-48"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="#000000"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path
+        d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z"
+      />
+      <path d="M12 7v5l3 3" />
+      <path d="M4 12h1" />
+      <path d="M19 12h1" />
+      <path d="M12 19v1" />
+    </svg>
+    <div class="flex flex-col gap-3">
+      <h3 class="text-2xl font-semibold">Office Opening Hours:</h3>
+      <div class="flex flex-col items-center">
+        <p>Monday-Friday</p>
+        <p class="text-primary">10:00am-6:00pm</p>
+      </div>
+    </div>
+  </div>
+  <app-form />
+  <app-footer />
+</div>

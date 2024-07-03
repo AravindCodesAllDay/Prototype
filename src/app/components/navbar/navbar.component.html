@@ -1,23 +1,89 @@
 <div
-  class="flex p-4 items-center fixed w-full z-10 shadow-md transition-colors duration-300"
+  class="flex flex-col p-4 fixed w-full z-10 shadow-md transition-colors duration-300"
   [ngClass]="{
     'bg-majorblack bg-opacity-45 text-majorwhite': isScroll(),
     'bg-secondary text-majorblack': !isScroll()
   }"
 >
-  <a href="/"> <h2 class="text-2xl font-bold text-primary">HALT-O</h2></a>
-  <ul class="flex gap-8 ml-auto font-medium">
-    <li>
+  <div class="flex items-center">
+    <a href="/"> <h2 class="text-2xl font-bold text-primary">HALT-O</h2></a>
+    <ul class="gap-8 ml-auto font-medium hidden sm:flex">
+      <li>
+        <a
+          href="/"
+          class="hover:text-primary transition-colors duration-100"
+          [ngClass]="{
+            'text-primary': isActive('/')
+          }"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/about"
+          class="hover:text-primary transition-colors duration-100"
+          [ngClass]="{ 'text-primary': isActive('/about') }"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          href="/application"
+          class="hover:text-primary transition-colors duration-100"
+          [ngClass]="{ 'text-primary': isActive('/application') }"
+          >Application</a
+        >
+      </li>
+      <li>
+        <a
+          href="/parking"
+          class="hover:text-primary transition-colors duration-100"
+          [ngClass]="{
+            'text-primary': isActive('/parking')
+          }"
+          >ParkingEcosystem</a
+        >
+      </li>
+      <li>
+        <a
+          href="/contact"
+          class="hover:text-primary transition-colors duration-150"
+          [ngClass]="{ 'text-primary': isActive('/contact') }"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <div class="sm:hidden ml-auto" (click)="toggleMenu()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-menu-2 size-8"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#ffae00"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M4 6l16 0" />
+        <path d="M4 12l16 0" />
+        <path d="M4 18l16 0" />
+      </svg>
+    </div>
+  </div>
+  @if(menuOpen()){
+  <ul class="flex-col transition-all duration-200 ease-in sm:hidden">
+    <li class="border-b-2 flex justify-center">
       <a
         href="/"
-        class="hover:text-primary transition-colors duration-100"
+        class="hover:text-primary"
         [ngClass]="{
           'text-primary': isActive('/')
         }"
         >Home</a
       >
     </li>
-    <li>
+    <li class="border-b-2 flex justify-center">
       <a
         href="/about"
         class="hover:text-primary transition-colors duration-100"
@@ -25,7 +91,7 @@
         >About</a
       >
     </li>
-    <li>
+    <li class="border-b-2 flex justify-center">
       <a
         href="/application"
         class="hover:text-primary transition-colors duration-100"
@@ -33,7 +99,7 @@
         >Application</a
       >
     </li>
-    <li>
+    <li class="border-b-2 flex justify-center">
       <a
         href="/parking"
         class="hover:text-primary transition-colors duration-100"
@@ -43,7 +109,7 @@
         >ParkingEcosystem</a
       >
     </li>
-    <li>
+    <li class="flex justify-center">
       <a
         href="/contact"
         class="hover:text-primary transition-colors duration-150"
@@ -52,4 +118,5 @@
       >
     </li>
   </ul>
+  }
 </div>
